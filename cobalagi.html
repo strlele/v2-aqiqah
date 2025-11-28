@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damba Domba - Aqiqah & Kambing</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        :root {
+            --green-color: #00FF8C;
+            --orange-color: #FFC107;
+            --brown-color: #1C0D06;
+            --red-color: #FF2033;
+            --neutral-400: #768491;
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .custom-container {
+            max-width: 1440px;
+            padding-left: 24px;
+            padding-right: 24px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        .navbar-container {
+            padding: 32px 24px !important;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            width: 130px;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--orange-color) !important;
+        }
+
+        .nav-gap {
+            width: 2px;
+            height: 14px;
+            border-radius: 8px;
+            background-color: #fff;
+            margin: 0 8px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600') center/cover;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .btn-pesan {
+            background-color: var(--orange-color);
+            color: #2A1608;
+            font-size: 16px;
+            padding: 20px 40px;
+            border-radius: 16px;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-pesan:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+        }
+
+        .aqiqah-text {
+            font-family: "Funnel Display", sans-serif;
+            font-size: 120px;
+            font-weight: bold;
+            text-align: center;
+            background: linear-gradient(87deg, rgba(255,255,255,0) 2%, rgba(255,255,255,0.4) 98%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+        }
+
+        /* Legal Certification */
+        .legal-certification {
+            padding: 80px 0;
+        }
+
+        .content-box h1 {
+            font-family: "Funnel Display", sans-serif;
+            font-size: 42px;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .content-box h4 {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        /* Katalog */
+        #katalog {
+            background-color: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .katalog-container h2 {
+            font-family: 'Funnel Display', sans-serif;
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+
+        .card-catalog {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        .btn-view-image {
+            border-radius: 12px;
+            padding: 14px 24px;
+            font-size: 14px;
+            border: 1px solid #ADB5BD;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp {
+            background-color: #55B678;
+            border-radius: 12px;
+            padding: 14px 24px;
+            font-size: 14px;
+            border: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #4a9f68;
+        }
+
+        /* Social Proof */
+        .social-proof-section {
+            padding: 80px 0;
+        }
+
+        .sp-card {
+            border: 1px solid #ADB5BD;
+            border-radius: 24px;
+            padding: 40px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .sp-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .sp-icon img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+        }
+
+        .sp-title {
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        /* FAQ */
+        #faq {
+            padding: 80px 0;
+        }
+
+        #faq h2 {
+            font-family: 'Funnel Display', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            padding: 20px;
+            cursor: pointer;
+            border-bottom: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-no {
+            border-radius: 12px;
+            border: 1px solid #ADB5BD;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .faq-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.2s ease;
+            margin-top: 16px;
+            padding-left: 76px;
+        }
+
+        .faq-item.open .faq-content {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .bi-chevron-down {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .bi-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        /* Testimoni */
+        #testimoni {
+            padding: 80px 0;
+        }
+
+        .testimoni-title {
+            font-family: 'Funnel Display', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .testimoni-feed {
+            background-color: #F9F9F9;
+            border-radius: 24px;
+            padding: 60px 40px;
+        }
+
+        .testimonial-content h5 {
+            font-size: 24px;
+            line-height: 1.5;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .testi-name {
+            text-align: center;
+            font-size: 18px;
+            color: #495057;
+            margin-top: 32px;
+        }
+
+        /* Footer */
+        .footer-section {
+            background: linear-gradient(180deg, #2A1608 26%, #000000 100%);
+            border-radius: 24px;
+            color: white;
+            margin: 24px;
+            padding: 60px 40px;
+        }
+
+        .footer-title {
+            font-family: 'Funnel Display', sans-serif;
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .custom-container {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+
+            .hero-subtitle {
+                font-size: 32px;
+            }
+
+            .aqiqah-text {
+                font-size: 200px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .aqiqah-text {
+                font-size: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute top-0 start-0 w-100 navbar-container">
+        <div class="container-fluid d-flex justify-content-between align-items-center p-0">
+            <a class="navbar-brand m-0" href="#" data-aos="fade-right">
+                <img src="https://via.placeholder.com/130x40/FFC107/000?text=Logo" alt="Logo" class="img-fluid" />
+            </a>
+
+            <div class="navbar" data-aos="fade-left">
+                <ul class="navbar-nav d-flex flex-row align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kambing</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-gap"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Aqiqah & Makanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="custom-container">
+            <div class="row align-items-end" style="min-height: 70vh;">
+                <div class="col-12 col-lg-8">
+                    <div class="py-5">
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                            Kami memastikan mulai dari proses sembelih hingga sajian menu
+                            lezat, dilakukan sesuai tuntunan syariat islam.
+                        </p>
+                        <a href="#" class="btn-pesan" data-aos="fade-up" data-aos-delay="400">
+                            Pesan Sekarang
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aqiqah-text" data-aos="zoom-in" data-aos-duration="1000">aqiqah</div>
+    </section>
+
+    <!-- LEGAL CERTIFICATION -->
+    <section class="legal-certification">
+        <div class="custom-container">
+            <div class="row g-5">
+                <div class="col-12 col-md-6" data-aos="fade-right">
+                    <div class="mt-3">
+                        <img src="https://via.placeholder.com/500x400/00FF8C/000?text=Halal+MUI" alt="Halal MUI" class="img-fluid rounded" />
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6" data-aos="fade-left">
+                    <div class="content-box">
+                        <h1 class="fw-bold">
+                            Tersertifikasi Demi Menjaga Kualitas dan Sesuai Syariat Islam
+                        </h1>
+                        <h4>
+                            Tersertifikasi HALAL, kami hadir dengan kambing sehat, olahan
+                            bergizi, dan paket aqiqah siap saji yang lezat serta higienis.
+                        </h4>
+                        <p class="fw-normal">
+                            Kami memastikan seluruh proses dari hulu ke hilir mulai dari
+                            kualitas kandang & pakan berkualitas, kesehatan hewan, prosedur
+                            pemotongan sesuai syar'i, hingga distribusi paket aqiqah yang cepat dan aman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG -->
+    <section id="katalog">
+        <div class="custom-container">
+            <div class="katalog-container">
+                <p data-aos="fade-up">Aqiqah & sajian menu kambing lainnya</p>
+                <h2 class="fw-bold" data-aos="fade-up" data-aos-delay="100">
+                    Beragam Pilihan Paket untuk Momen Istimewa Anda
+                </h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400" alt="Paket Aqiqah Hemat" class="card-catalog" />
+                        <div class="mt-3">
+                            <button class="btn btn-view-image w-100 mb-2">Lihat Gambar</button>
+                            <button class="btn btn-whatsapp w-100">
+                                <i class="bi bi-whatsapp me-2"></i> Konsultasi
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400" alt="Paket Aqiqah Standar" class="card-catalog" />
+                        <div class="mt-3">
+                            <button class="btn btn-view-image w-100 mb-2">Lihat Gambar</button>
+                            <button class="btn btn-whatsapp w-100">
+                                <i class="bi bi-whatsapp me-2"></i> Konsultasi
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Paket Aqiqah Premium" class="card-catalog" />
+                        <div class="mt-3">
+                            <button class="btn btn-view-image w-100 mb-2">Lihat Gambar</button>
+                            <button class="btn btn-whatsapp w-100">
+                                <i class="bi bi-whatsapp me-2"></i> Konsultasi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof-section">
+        <div class="custom-container">
+            <h4 class="fw-semibold mb-5" data-aos="fade-up">Komitmen Kami</h4>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sp-card">
+                        <div class="sp-icon">
+                            <img src="https://via.placeholder.com/40/00FF8C/000" alt="icon" />
+                        </div>
+                        <h3 class="sp-title fw-semibold">Healthy Assurance</h3>
+                        <p class="sp-desc">
+                            Kami memastikan setiap kambing sehat, bebas penyakit, dan diperiksa dokter hewan sebelum
+                            disembelih.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="sp-card">
+                        <div class="sp-icon">
+                            <img src="https://via.placeholder.com/40/FFC107/000" alt="icon" />
+                        </div>
+                        <h3 class="sp-title fw-semibold">Quality Assurance</h3>
+                        <p class="sp-desc">
+                            Setiap hewan kami dipelihara dengan standar terbaik dari pakan alami hingga proses
+                            pemeliharaan higienis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="sp-card">
+                        <div class="sp-icon">
+                            <img src="https://via.placeholder.com/40/FF2033/000" alt="icon" />
+                        </div>
+                        <h3 class="sp-title fw-semibold">Certified & Syar'i Process</h3>
+                        <p class="sp-desc">
+                            Seluruh proses penyembelihan dilakukan oleh juru sembelih bersertifikat halal dan sesuai
+                            tuntunan syar'i.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="custom-container">
+            <h2 data-aos="fade-up">Pertanyaan yang sering anda tanyakan</h2>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <div class="faq-no">01</div>
+                    </div>
+                    <div class="col-9">
+                        <h4 class="faq-title">Apakah semua kambing disembelih sesuai syariat Islam?</h4>
+                    </div>
+                    <div class="col-1 text-end">
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="faq-content">
+                    <p>Tentu, semua proses penyembelihan dilakukan oleh juru sembelih bersertifikat halal dan sesuai
+                        tuntunan syar'i.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <div class="faq-no">02</div>
+                    </div>
+                    <div class="col-9">
+                        <h4 class="faq-title">Apakah kambing dijamin sehat?</h4>
+                    </div>
+                    <div class="col-1 text-end">
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="faq-content">
+                    <p>Ya, semua kambing telah melalui pemeriksaan kesehatan oleh dokter hewan dan mendapat surat keterangan sehat.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <div class="faq-no">03</div>
+                    </div>
+                    <div class="col-9">
+                        <h4 class="faq-title">Bisakah saya memilih sendiri kambing untuk aqiqah?</h4>
+                    </div>
+                    <div class="col-1 text-end">
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="faq-content">
+                    <p>Tentu bisa. Anda dapat memilih langsung kambing di lokasi kami atau melalui foto/video yang kami kirim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni">
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h2 class="testimoni-title">Kata mereka yang senang dengan layanan kami</h2>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="testimoni-feed">
+                        <div class="testimonial-content">
+                            <h5>"Pelayanan Damba Domba luar biasa! Proses aqiqah sangat mudah, kambing sehat, dan masakannya enak banget."</h5>
+                            <p class="testi-name">Rindi Rica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section" data-aos="fade-up">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <h2 class="footer-title fw-bold">Solusi berkah kebutuhan aqiqah anda</h2>
+            </div>
+            <div class="col-12 col-lg-5 d-flex align-items-baseline justify-content-lg-end">
+                <a href="#" class="btn-pesan">
+                    Pesan Sekarang
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-6">
+                <p class="fw-semibold mb-2">Alamat Kami:</p>
+                <p class="fw-normal">
+                    Jl Keranjang No.34, Kelurahan Tulusrejo, Kec. Lowokwaru<br />
+                    Malang - Indonesia, 18041
+                </p>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end gap-3">
+                <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 pt-4 border-top border-secondary">
+            <p class="mb-0">©2025 Damba Domba | All Right Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const isOpen = this.classList.contains('open');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('open');
+                });
+                
+                // Open clicked item if it wasn't open
+                if (!isOpen) {
+                    this.classList.add('open');
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-container');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(28, 13, 6, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

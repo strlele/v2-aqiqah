@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    
+    <!-- Bootstrap CSS (jika dibutuhkan) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Funnel+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Hero Section - Mobile First */
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            height: 120vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0) 90%),
+                linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0) 40%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .padding-hero {
+            position: relative;
+            z-index: 3;
+            padding-bottom: 30px;
+            margin-bottom: -30px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: white;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            transition: opacity .6s ease;
+        }
+
+        .aqiqah-text {
+            background: linear-gradient(87.56deg, rgba(255,255,255,0) 1.92%, rgba(255,255,255,0.4) 98.53%);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+            font-family: "Funnel Display", sans-serif;
+            font-size: 290px;
+            position: relative;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            line-height: 1;
+            pointer-events: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            transition: opacity .6s ease;
+        }
+
+        .btn-order {
+            background-color: #D4AF37;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-order:hover {
+            background-color: #B8941F;
+            color: white;
+        }
+
+        /* Styles untuk background layers */
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .hero-bg .bg-img,
+        .hero-bg .bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-bg.active {
+            opacity: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .padding-hero {
+                padding-top: 200px;
+            }
+
+            .hero-section {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+            }
+
+            .aqiqah-text {
+                font-size: 90px;
+            }
+
+            .btn-order {
+                width: 100%;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+
+        /* Mobile Small */
+        @media (max-width: 320px) {
+            .padding-hero {
+                padding-top: 30px;
+            }
+
+            .hero-section {
+                min-height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .hero-section {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+            }
+
+            .padding-hero {
+                padding-top: 0;
+                margin-bottom: 0;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .aqiqah-text {
+                font-size: 190px;
+            }
+        }
+
+        /* Desktop Large Styles */
+        @media (min-width: 1024px) {
+            .hero-section {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+            }
+
+            .hero-content {
+                padding-top: 0;
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+            }
+
+            .hero-title {
+                font-size: 4rem;
+                margin-bottom: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-content {
+                width: 1500px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero-section position-relative overflow-hidden">
+    <div class="hero-bg hero-bg-a">
+        <img class="bg-img" alt="" style="display:none;"/>
+        <video class="bg-video" muted playsinline loop style="display:none;"></video>
+    </div>
+    <div class="hero-bg hero-bg-b">
+        <img class="bg-img" alt="" style="display:none;"/>
+        <video class="bg-video" muted playsinline loop style="display:none;"></video>
+    </div>
+    
+    <!-- Hero Content -->
+    <div class="custom-container">
+        <div class="row align-items-center hero-content">
+            <div class="col-12 col-lg-7">
+                <div class="padding-hero">
+                    <p class="hero-subtitle fw-normal w-75">
+                        Kami memastikan mulai dari proses sembelih hingga sajian menu lezat, dilakukan sesuai tuntunan syariat islam.
+                    </p>
+                    <a href="#" class="btn-order d-inline-flex align-items-center fw-semibold px-4 py-3 gap-2">
+                        Pesan Sekarang
+                        <img src="image/icon/export-square.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aqiqah-text fw-bold d-flex justify-content-center align-items-end mb-5" id="heroHeadline">AQIQAH</div>
+</section>
+
+<script>
+(function(){
+    const layerA = document.querySelector('.hero-bg-a');
+    const layerB = document.querySelector('.hero-bg-b');
+    const headlineEl = document.getElementById('heroHeadline');
+    const subtitleEl = document.querySelector('.hero-subtitle');
+    let currentActive = layerA;
+    let nextLayer = layerB;
+    let idx = 0;
+
+    // Data slideshow statis - ganti dengan path gambar/video Anda
+    const slides = [
+        {
+            file: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920',
+            headline: 'AQIQAH',
+            title: 'Kami memastikan mulai dari proses sembelih hingga sajian menu lezat, dilakukan sesuai tuntunan syariat islam.'
+        },
+        {
+            file: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920',
+            headline: 'QURBAN',
+            title: 'Layanan qurban terpercaya dengan jaminan kualitas hewan dan proses yang sesuai syariat.'
+        },
+        {
+            file: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920',
+            headline: 'KATERING',
+            title: 'Sajian menu lezat dan halal untuk berbagai acara spesial Anda.'
+        }
+    ];
+
+    function isVideo(url){ return /\.(mp4|webm|mov)$/i.test(url || ''); }
+
+    function clearLayer(layer){
+        const img = layer.querySelector('.bg-img');
+        const vid = layer.querySelector('.bg-video');
+        img.style.display = 'none';
+        img.removeAttribute('src');
+        vid.pause();
+        vid.removeAttribute('src');
+        while (vid.firstChild) vid.removeChild(vid.firstChild);
+        vid.style.display = 'none';
+        layer.classList.remove('active');
+    }
+
+    function populateLayer(layer, slide, cb){
+        const img = layer.querySelector('.bg-img');
+        const vid = layer.querySelector('.bg-video');
+        clearLayer(layer);
+        
+        if (isVideo(slide.file)){
+            const source = document.createElement('source');
+            source.src = slide.file;
+            source.type = 'video/mp4';
+            vid.appendChild(source);
+            vid.style.display = '';
+            vid.load();
+            vid.oncanplay = function(){ 
+                try{ vid.play(); }catch(e){} 
+                cb && cb(); 
+            };
+            vid.onerror = function(){ cb && cb(); };
+        } else {
+            img.onload = function(){ cb && cb(); };
+            img.onerror = function(){ cb && cb(); };
+            img.src = slide.file;
+            img.style.display = '';
+        }
+    }
+
+    function crossfadeTo(i){
+        const slide = slides[i % slides.length];
+        headlineEl.style.opacity = 0;
+        subtitleEl.style.opacity = 0;
+        
+        populateLayer(nextLayer, slide, function(){
+            headlineEl.textContent = slide.headline || '';
+            subtitleEl.textContent = slide.title || '';
+            
+            requestAnimationFrame(()=>{
+                nextLayer.classList.add('active');
+                currentActive.classList.remove('active');
+                headlineEl.style.opacity = 1;
+                subtitleEl.style.opacity = 1;
+                const tmp = currentActive; 
+                currentActive = nextLayer; 
+                nextLayer = tmp;
+            });
+        });
+    }
+
+    function start(){
+        if(!slides.length) return;
+        
+        // Load slide pertama
+        populateLayer(currentActive, slides[0], function(){});
+        currentActive.classList.add('active');
+        headlineEl.textContent = slides[0].headline || '';
+        subtitleEl.textContent = slides[0].title || '';
+        headlineEl.style.opacity = 1;
+        subtitleEl.style.opacity = 1;
+        
+        // Auto-slide setiap 10 detik jika ada lebih dari 1 slide
+        if (slides.length > 1){
+            setInterval(()=>{ 
+                idx = (idx + 1) % slides.length; 
+                crossfadeTo(idx); 
+            }, 10000);
+        }
+    }
+
+    // Mulai slideshow
+    start();
+})();
+</script>
+
+</body>
+</html>

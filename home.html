@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+
+    <title>Damda Domba</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute top-0 start-0 w-100 navbar-container"
+        id="mainNavbar">
+        <div data-aos="fade-down" data-aos-delay="300" class="container-fluid d-flex justify-content-between align-items-center p-0">
+            <a class="navbar-brand m-0" href="index.html">
+                <img src="asset/image/logo/logoBaru.svg" alt="Logo" class="img-fluid" width="130" />
+            </a>
+
+            <div class="navbar" id="navbarNav">
+                <ul class="navbar-nav d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kambing</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-gap"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Aqiqah & Makanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section position-relative overflow-hidden">
+        <div class="hero-bg hero-bg-a">
+            <img class="bg-img" alt="" style="display: none" />
+            <video class="bg-video" muted playsinline loop style="display: none"></video>
+        </div>
+        <div class="hero-bg hero-bg-b">
+            <img class="bg-img" alt="" style="display: none" />
+            <video class="bg-video" muted playsinline loop style="display: none"></video>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="custom-container">
+            <div class="row align-items-center hero-content">
+                <div class="col-12 col-lg-7">
+                    <div class="padding-hero">
+                        <p class="hero-subtitle fw-normal" data-aos="fade-up" data-aos-delay="200">
+                            Kami memastikan mulai dari proses sembelih hingga sajian menu
+                            lezat, dilakukan sesuai tuntunan syariat islam.
+                        </p>
+                        <a href="#" class="btn-pesan fw-semibold d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                            Pesan Sekarang
+                            <img src="asset/image/icon/export-square.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aqiqah-text fw-bold d-flex justify-content-center align-items-end mb-5" id="heroHeadline">
+            aqiqah
+        </div>
+    </section>
+
+    <!-- LEGAL CERTIFICATION -->
+    <section class="legal-certification">
+        <div class="custom-container">
+            <div class="row g-5">
+                <!-- Kolom Kiri -->
+                <div class="col-12 col-md-6" data-aos="fade-up">
+                    <div class="mt-3">
+                        <img src="asset/image/halal-img.webp" alt="Halal MUI" class="img-fluid" />
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan -->
+                <div class="col-12 col-md-6">
+                    <div class="content-box">
+                        <h1 class="fw-bold" data-aos="fade-up" data-aos-delay="100">
+                            Tersertifikasi Demi Menjaga Kualitas dan Sesuai Syariat Islam
+                        </h1>
+                        <h4  data-aos="fade-up" data-aos-delay="200">
+                            Tersertifikasi HALAL, kami hadir dengan kambing sehat, olahan
+                            bergizi, dan paket aqiqah siap saji yang lezat serta higienis —
+                            solusi praktis untuk keluarga yang ingin menjalankan sunnah
+                            penuh keberkahan.
+                        </h4>
+                        <p class="fw-normal mb-0 d-none d-md-block"  data-aos="fade-up" data-aos-delay="300">
+                            Kami memastikan seluruh proses dari hulu ke hilir mulai dari
+                            kualitas kandang & pakan berkualitas, kesehatan hewan , prosedur
+                            pemotongan sesuai syar’i, pengolahan & sajian menu yang lezat &
+                            hieginis, hingga distribusi paket aqiqah yang cepat dan aman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AQIQAH & MAKAN -->
+    <section id="katalog" class="pt-5">
+        <div class="custom-container">
+            <div class="katalog-container d-flex flex-column">
+                <p data-aos="fade-up">Aqiqah & sajian menu kambing lainnya</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h2 class="fw-bold" data-aos="fade-up" data-aos-delay="100">
+                        Beragam Pilihan Paket untuk <br class="d-none d-lg-block" />
+                        Momen Istimewa Anda
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="carousel-item-katalog position-relative" style="border-radius: 24px">
+                            <img src="asset/image/paket-1.png" alt="Paket Aqiqah" class="img-fluid card-catalog" />
+                            <div
+                                class="overlay-hover position-absolute justify-content-center text-white h-100 flex-column align-items-center">
+                                <button type="button" class="btn btn-light btn-sm btn-view-image fw-semibold mb-3">
+                                    Lihat Gambar
+                                </button>
+                                <button type="button" class="btn-whatsapp text-decoration-none fw-semibold text-dark"
+                                    data-title="Paket Aqiqah Hemat">
+                                    <i class="bi bi-whatsapp me-1 fs-6"></i> Konsultasi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tombol bawah untuk mobile & tablet -->
+                        <div class="btn-group-mobile d-lg-none pt-3">
+                            <div class="row g-2">
+                                <div class="col-5">
+                                    <button type="button" class="btn btn-light btn-view-image btn-sm w-100 fw-semibold">
+                                        Lihat Gambar
+                                    </button>
+                                </div>
+
+                                <div class="col-7">
+                                    <button type="button" class="btn btn-whatsapp w-100 fw-semibold text-dark">
+                                        <i class="bi bi-whatsapp me-2 fs-5"></i> Konsultasi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="carousel-item-katalog position-relative" style="border-radius: 24px">
+                            <img src="asset/image/paket-2.png" alt="Paket Aqiqah" class="img-fluid card-catalog" />
+                            <div
+                                class="overlay-hover position-absolute justify-content-center text-white h-100 flex-column align-items-center">
+                                <button type="button" class="btn btn-light btn-sm btn-view-image fw-semibold mb-3">
+                                    Lihat Gambar
+                                </button>
+                                <button type="button" class="btn-whatsapp text-decoration-none fw-semibold text-dark"
+                                    data-title="Paket Aqiqah Standar">
+                                    <i class="bi bi-whatsapp me-1 fs-6"></i> Konsultasi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tombol bawah untuk mobile & tablet -->
+                        <div class="btn-group-mobile d-lg-none pt-3">
+                            <div class="row g-2">
+                                <div class="col-5">
+                                    <button type="button" class="btn btn-light btn-view-image btn-sm w-100 fw-semibold">
+                                        Lihat Gambar
+                                    </button>
+                                </div>
+
+                                <div class="col-7">
+                                    <button type="button" class="btn btn-whatsapp w-100 fw-semibold text-dark">
+                                        <i class="bi bi-whatsapp me-2 fs-5"></i> Konsultasi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="carousel-item-katalog position-relative" style="border-radius: 24px">
+                            <img src="asset/image/paket-3.png" alt="Paket Aqiqah" class="img-fluid card-catalog" />
+                            <div
+                                class="overlay-hover position-absolute justify-content-center text-white h-100 flex-column align-items-center">
+                                <button type="button" class="btn btn-light btn-sm btn-view-image fw-semibold mb-3">
+                                    Lihat Gambar
+                                </button>
+                                <button type="button" class="btn-whatsapp text-decoration-none fw-semibold text-dark"
+                                    data-title="Paket Aqiqah Premium">
+                                    <i class="bi bi-whatsapp me-1 fs-6"></i> Konsultasi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tombol bawah untuk mobile & tablet -->
+                        <div class="btn-group-mobile d-lg-none pt-3">
+                            <div class="row g-2">
+                                <div class="col-5">
+                                    <button type="button" class="btn btn-light btn-view-image btn-sm w-100 fw-semibold">
+                                        Lihat Gambar
+                                    </button>
+                                </div>
+
+                                <div class="col-7">
+                                    <button type="button" class="btn btn-whatsapp w-100 fw-semibold text-dark">
+                                        <i class="bi bi-whatsapp me-2 fs-5"></i> Konsultasi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center mt-5" data-aos="fade-up">
+                    <a href="{{ route('kambing') }}" class="btn btn-light btn-sm btn-link fw-semibold mb-3 p-3">Jelajahi
+                        Selengkapnya
+                        <i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal untuk Gambar -->
+    <div class="modal fade" id="katalogImageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen m-0">
+            <div class="modal-content bg-black bg-opacity-75 border-0">
+                <div class="modal-body p-0 d-flex align-items-center justify-content-center">
+                    <img id="katalogModalImg" alt="Paket Aqiqah"
+                        style="max-width: 100vw; max-height: 100vh; object-fit: contain" />
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- olahan kambing -->
+    <section id="olahan-kambing" class="py-5">
+        <div class="olahan-kambing-container py-5">
+            <div class="row container-olahan g-0">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-between title-content">
+                    <div class="olahan-title-teks">
+                        <img src="asset/image/icon/like-shapes.svg" alt="" data-aos="fade-up" data-aos-delay="100">
+                        <p data-aos="fade-up" data-aos-delay="200">Jelajahi beragam produk ternak unggulan kami, dari kambing pilihan hingga hasil turunannya
+                            yang siap memenuhi berbagai kebutuhan Anda.</p>
+                    </div>
+                    <div class="olahan-desc" data-aos="fade-up" data-aos-delay="300">
+                        <h1 class="fw-bold">Hadirkan kualitas terbaik dari peternakan kami ke rumah Anda. Harga
+                            <br><span class="price-highlight">Mulai 1.000.000-an!</span>
+                        </h1>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="col-12 col-md-6 px-0 position-relative" style="min-height: 440px;">
+                    <div id="olahan-bg" class="img-background-olahan position-absolute top-0 start-0 w-100 h-100"></div>
+                    <div class="padding-variant d-flex align-items-end position-absolute w-100 h-100">
+                        <a href="#" class="text-decoration-none w-100">
+                            <div id="olahan-card" class="d-flex align-items-center btn-export w-100 gap-4"
+                                data-indicator="0">
+                                <div class="d-flex align-items-center">
+                                    <div class="img-container overflow-hidden">
+                                        <img id="olahan-thumb" src="asset/image/kambing_olahan.webp"
+                                            alt="Olahan Kambing" class="w-100 h-100 object-fit-cover d-block">
+                                    </div>
+                                </div>
+                                <h5 id="olahan-title">Daftar Kambing <br> & Produk Lainnya</h5>
+                                <img src="asset/image/icon/export.svg" alt="export">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF SECTION -->
+    <section class="social-proof-section">
+        <div class="custom-container">
+            <h4 class="fw-semibold" data-aos="fade-up" data-aos-delay="100">Komitmen Kami</h4>
+            <div class="row social-proof">
+                <!-- Card 1 -->
+                <div class="col-lg-4 card-sp"  data-aos="fade-up" data-aos-delay="200">
+                    <div class="sp-card h-100">
+                        <div class="sp-icon">
+                            <img src="asset/image/icon/happyemoji.svg" alt="icon 1" />
+                        </div>
+                        <h3 class="sp-title fw-semibold">Healthy Assurance</h3>
+                        <p class="sp-desc mb-0">
+                            Kami memastikan setiap kambing sehat, bebas penyakit, dan diperiksa dokter hewan sebelum
+                            disembelih, sehingga aman dan menyehatkan untuk seluruh keluarga.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 card-sp"  data-aos="fade-up" data-aos-delay="300">
+                    <div class="sp-card h-100">
+                        <div class="sp-icon">
+                            <img src="asset/image/icon/verify.svg" alt="icon 2" />
+                        </div>
+                        <h3 class="sp-title fw-semibold">
+                            Quality <br class="d-none d-lg-block" /> Assurance
+                        </h3>
+                        <p class="sp-desc mb-0">
+                            Setiap hewan kami dipelihara dengan standar terbaik—dari pakan alami hingga proses
+                            pemeliharaan higienis—agar menghasilkan daging kambing yang empuk, segar, dan berkualitas
+                            tinggi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 card-sp"  data-aos="fade-up" data-aos-delay="400">
+                    <div class="sp-card h-100">
+                        <div class="sp-icon">
+                            <img src="asset/image/icon/medal-star.svg" alt="icon 3" />
+                        </div>
+                        <h3 class="sp-title fw-semibold">Certified & Syar’i Process</h3>
+                        <p class="sp-desc mb-0">
+                            Seluruh proses penyembelihan dilakukan oleh juru sembelih bersertifikat halal dan sesuai
+                            tuntunan syar’i, menjamin kehalalan dan keberkahan setiap sajian.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="faq-container">
+            <h2 class="text-center"  data-aos="fade-up">Pertanyaan yang sering anda tanyakan</h2>
+
+            <!-- 01 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="100">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    01
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Apakah semua kambing di Damba Domba disembelih sesuai syariat
+                        Islam?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Tentu, semua proses penyembelihan dilakukan oleh juru sembelih bersertifikat halal dan sesuai
+                        tuntunan syar'i, mulai dari niat hingga distribusi daging.</p>
+                </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="200">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    02
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Apakah kambing di Damba Domba dijamin sehat?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Ya, semua kambing yang digunakan telah melalui proses pemeriksaan kesehatan oleh petugas
+                        berwenang dan mendapatkan surat keterangan sehat dari dinas terkait sebelum disembelih.</p>
+                </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="300">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    03
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Bisakah saya memilih sendiri kambing untuk aqiqah?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Tentu bisa. Anda dapat memilih langsung kambing di lokasi kami atau melalui foto/video yang kami
+                        kirim sebelum proses penyembelihan.</p>
+                </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="400">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    04
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Apakah layanan mencakup pemasakan dan pengantaran?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Ya, kami menyediakan layanan lengkap mulai dari penyembelihan, pemasakan dengan berbagai pilihan
+                        menu, hingga pengantaran ke alamat Anda.</p>
+                </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="500">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    05
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Apakah ada sertifikasi halal atau legalitas resmi?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Ada. Damba Domba memiliki sertifikasi halal dari MUI serta izin usaha dan peternakan resmi yang
+                        terdaftar, sehingga prosesnya aman dan terpercaya.</p>
+                </div>
+            </div>
+
+            <!-- 06 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="600">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    06
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Kapan waktu terbaik untuk melakukan pemesanan aqiqah?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Sebaiknya pemesanan dilakukan minimal 2–3 hari sebelum pelaksanaan agar kami dapat mempersiapkan
+                        kambing dan menu sesuai permintaan Anda.</p>
+                </div>
+            </div>
+
+            <!-- 07 -->
+            <div class="faq-item row justify-content-between align-items-lg-center d-flex toggle-faq"  data-aos="fade-up" data-aos-delay="700">
+                <div class="col-2 fw-bold toggle-faq faq-no fw-bold d-flex justify-content-center align-items-center">
+                    07
+                </div>
+                <div class="col-9 toggle-faq">
+                    <h4 class="fw-semibold faq-title">Apakah kambing di Damba Domba dijamin sehat?</h4>
+                </div>
+                <div class="col-1 align-items-center justify-content-end d-flex toggle-faq">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="col-10 faq-content">
+                    <p>Ya, tentu. Semua kambing di Damba Domba dirawat dengan pakan berkualitas dan lingkungan yang
+                        bersih. Setiap kambing juga dicek kesehatannya secara rutin untuk memastikan kondisi prima
+                        sebelum disembelih.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="my-5">
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2  data-aos="fade-up" class="testimoni-title fw-bold">Kata mereka yang <br class="d-none d-md-block"> senang dengan
+                        <br class="d-none d-md-block"> layanan kami
+                    </h2>
+                    <div class="row img-testi">
+                        <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+                            <img src="asset/image/gulai.jpg" alt="Gulai" class="testimoni-img">
+                        </div>
+                        <div class="col-8" data-aos="fade-up" data-aos-delay="200">
+                            <img src="asset/image/sate.png" alt="Sate" class="testimoni-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 testimoni-feed" data-aos="fade-up" data-aos-delay="300">
+                    <div id="testiPrev" class="testimoni-button" role="button" aria-label="Prev testimonial">
+                        <img src="asset/image/icon/arrow-left-testi.svg" alt="Arrow Left">
+                    </div>
+                    <div class="feed">
+                        <div class="testimonial-content">
+                            <h5 id="testiMessage">"Pelayanan Damba Domba luar biasa! Proses aqiqah sangat mudah, kambing
+                                sehat, dan masakannya enak banget. Keluarga juga puas dengan hasilnya."</h5>
+                            <p id="testiName" class="testi-name">Rindi Rica</p>
+                        </div>
+                        <div id="testiIndicators" class="testi-indicators">
+                            <span class="dot active" role="button" aria-label="Go to testimonial 1"></span>
+                            <span class="dot" role="button" aria-label="Go to testimonial 2"></span>
+                            <span class="dot" role="button" aria-label="Go to testimonial 3"></span>
+                            <span class="dot" role="button" aria-label="Go to testimonial 4"></span>
+                        </div>
+                    </div>
+                    <div id="testiNext" class="testimoni-button" role="button" aria-label="Next testimonial">
+                        <img src="asset/image/icon/arrow-right-testi.svg" alt="Arrow Right">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERITA KAMI -->
+    <section class="cerita-section my-5">
+        <div class="cerita-container" data-aos="fade-up">
+            <h2 class="title-sosmed fw-bold">Cerita Kami</h2>
+            <div class="container-md-fluid">
+                <div x-data="videoCarousel()" class="video-carousel">
+                    <button x-show="canScrollLeft" @click="scrollPrev" class="nav-carousel-btn prev">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E"
+                            alt="Arrow Left">
+                    </button>
+
+                    <div class="video-container" x-ref="container">
+                        <template x-for="(video, index) in videos" :key="index">
+                            <div class="video-wrapper">
+                                <a :href="video.url" target="_blank" rel="noopener" class="text-decoration-none">
+                                    <div class="video-card">
+                                        <img :src="video.thumbnail" :alt="video.title">
+                                    </div>
+
+                                    <div class="video-source">
+                                        <div class="platform-icon" :style="`background-color: ${video.platformColor}`">
+                                            <template x-if="video.platform === 'instagram'">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                                    <path
+                                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                                </svg>
+                                            </template>
+
+                                            <template x-if="video.platform === 'tiktok'">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                                    <path
+                                                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                                                </svg>
+                                            </template>
+
+                                            <template x-if="video.platform === 'youtube'">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                                    <path
+                                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                                </svg>
+                                            </template>
+                                        </div>
+                                        <span x-text="video.source" class="sosial-media"></span>
+                                        <span>•</span>
+                                        <span x-text="video.judul" class="video-judul"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </template>
+                    </div>
+
+                    <button x-show="canScrollRight" @click="scrollNext" class="nav-carousel-btn next">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E"
+                            alt="Arrow Right">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERITA -->
+    <section id="artikel">
+        <div class="berita-section my-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="artikel-title fw-bold" data-aos="fade-up">Berita</h2>
+                <a href="#" class="text-decoration-none d-flex gap-2" data-aos="fade-up">
+                    <div>Selengkapnya</div>
+                    <i class="bi bi-arrow-right mt-1"></i>
+                </a>
+            </div>
+            <div class="row g-3 g-md-4">
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card">
+                        <img src="asset/image/berita-1.jpg" alt="Santri" class="news-image">
+                        <div class="news-content">
+                            <h3 class="news-title fw-semibold">Santri Baru Disambut dengan Doa Bersama dan Pengajian
+                                Akbar</h3>
+                            <p class="news-date">16 Okt, 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="asset/image/berita-2.jpg" alt="Pesantren" class="news-image">
+                        <div class="news-content">
+                            <h3 class="news-title">Pesantren Resmikan Swalayan Santri sebagai Wujud Kemandi...</h3>
+                            <p class="news-date">18 Okt, 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="asset/image/berita-3.jpg" alt="Kitab" class="news-image">
+                        <div class="news-content">
+                            <h3 class="news-title">Alhamdulillah, Kemenag Salurkan Bantuan Kitab untuk Pondok Pe...</h3>
+                            <p class="news-date">18 Okt, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section" data-aos="fade-up">
+        <div class="footer-body">
+            <div class="row top-section">
+                <div class="col-12 col-lg-7">
+                    <h2 class="footer-title fw-bold">Solusi berkah kebutuhan aqiqah anda</h2>
+                </div>
+                <div class="col-12 col-lg-5 d-flex align-items-baseline justify-start justify-content-lg-end">
+                    <a href="#" class="btn-pesan fw-semibold d-flex justify-content-center">
+                        Pesan Sekarang
+                        <img src="asset/image/icon/export-square.svg" alt="" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6 address-section">
+                    <p class="address-title fw-semibold small mb-2">Alamat Kami :</p>
+                    <p class="address-text fw-normal small">
+                        Jl Keranjang No.34, Kelurahan Tulusrejo, Kec. Lowokwaru<br />
+                        Malang - Indonesia, 18041
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex align-items-center justify-start justify-content-md-end">
+                    <a href="#" class="social-icon" title="Facebook" aria-label="Facebook">
+                        <img src="asset/image/icon/fb-icon.svg" alt="Facebook Icon" class="img-fluid me-3 me-lg-4" />
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram" aria-label="Instagram">
+                        <img src="asset/image/icon/Instagram.svg" alt="Instagram Icon" class="img-fluid me-3 me-lg-4" />
+                    </a>
+                    <a href="#" class="social-icon" title="WhatsApp" aria-label="WhatsApp">
+                        <img src="asset/image/icon/wa-icon.svg" alt="WhatsApp Icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo-copyright">
+            <div class="logo">
+                <div class="logo-icon d-flex gap-2">
+                    <img src="asset/image/logo/logoBaru.svg" alt="Logo" />
+                    <img src="asset/image/logo/Logo-halal-2.svg" alt="Logo" />
+                </div>
+            </div>
+            <p class="copyright-text text-white fw-normal">
+                ©2025 Damba Domba | All Right Reserved |
+                <a href="#" class="text-decoration-none text-white footer-link-hover">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+        <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+         // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // hero
+        (function () {
+            const layerA = document.querySelector(".hero-bg-a");
+            const layerB = document.querySelector(".hero-bg-b");
+            const headlineEl = document.getElementById("heroHeadline");
+            const subtitleEl = document.querySelector(".hero-subtitle");
+            let currentActive = layerA;
+            let nextLayer = layerB;
+            let idx = 0;
+
+            // Data slideshow statis - ganti dengan path gambar/video Anda
+            const slides = [
+                {
+                    file: "asset/image/hero.png",
+                    headline: "aqiqah",
+                    title:
+                        "Rayakan Kehadiran Buah Hati dengan Aqiqah Terbaik dan Sesuai Tuntunan",
+                },
+                // {
+                //     file: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920',
+                //     headline: 'qurban',
+                //     title: 'Layanan qurban terpercaya dengan jaminan kualitas hewan dan proses yang sesuai syariat'
+                // },
+                // {
+                //     file: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920',
+                //     headline: 'katering',
+                //     title: 'Sajian menu lezat dan halal untuk berbagai acara spesial Anda'
+                // }
+            ];
+
+            function isVideo(url) {
+                return /\.(mp4|webm|mov)$/i.test(url || "");
+            }
+
+            function clearLayer(layer) {
+                const img = layer.querySelector(".bg-img");
+                const vid = layer.querySelector(".bg-video");
+                img.style.display = "none";
+                img.removeAttribute("src");
+                vid.pause();
+                vid.removeAttribute("src");
+                while (vid.firstChild) vid.removeChild(vid.firstChild);
+                vid.style.display = "none";
+                layer.classList.remove("active");
+            }
+
+            function populateLayer(layer, slide, cb) {
+                const img = layer.querySelector(".bg-img");
+                const vid = layer.querySelector(".bg-video");
+                clearLayer(layer);
+
+                if (isVideo(slide.file)) {
+                    const source = document.createElement("source");
+                    source.src = slide.file;
+                    source.type = "video/mp4";
+                    vid.appendChild(source);
+                    vid.style.display = "";
+                    vid.load();
+                    vid.oncanplay = function () {
+                        try {
+                            vid.play();
+                        } catch (e) { }
+                        cb && cb();
+                    };
+                    vid.onerror = function () {
+                        cb && cb();
+                    };
+                } else {
+                    img.onload = function () {
+                        cb && cb();
+                    };
+                    img.onerror = function () {
+                        cb && cb();
+                    };
+                    img.src = slide.file;
+                    img.style.display = "";
+                }
+            }
+
+            function crossfadeTo(i) {
+                const slide = slides[i % slides.length];
+                headlineEl.style.opacity = 0;
+                subtitleEl.style.opacity = 0;
+
+                populateLayer(nextLayer, slide, function () {
+                    headlineEl.textContent = slide.headline || "";
+                    subtitleEl.textContent = slide.title || "";
+
+                    requestAnimationFrame(() => {
+                        nextLayer.classList.add("active");
+                        currentActive.classList.remove("active");
+                        headlineEl.style.opacity = 1;
+                        subtitleEl.style.opacity = 1;
+                        const tmp = currentActive;
+                        currentActive = nextLayer;
+                        nextLayer = tmp;
+                    });
+                });
+            }
+
+            function start() {
+                if (!slides.length) return;
+
+                // Load slide pertama
+                populateLayer(currentActive, slides[0], function () { });
+                currentActive.classList.add("active");
+                headlineEl.textContent = slides[0].headline || "";
+                subtitleEl.textContent = slides[0].title || "";
+                headlineEl.style.opacity = 1;
+                subtitleEl.style.opacity = 1;
+
+                // Auto-slide setiap 10 detik jika ada lebih dari 1 slide
+                if (slides.length > 1) {
+                    setInterval(() => {
+                        idx = (idx + 1) % slides.length;
+                        crossfadeTo(idx);
+                    }, 10000);
+                }
+            }
+
+            // Mulai slideshow
+            start();
+        })();
+
+        (function () {
+            const section = document.getElementById("katalog");
+            const modalEl = document.getElementById("katalogImageModal");
+            const modalImg = document.getElementById("katalogModalImg");
+            const modal = new bootstrap.Modal(modalEl);
+
+            // Fungsi untuk membuka WhatsApp
+            function openWhatsApp(productTitle) {
+                const phoneNumber = "6281234567890"; // Ganti dengan nomor WhatsApp yang sesuai
+                const message = `Halo, saya tertarik untuk memesan produk: ${productTitle}`;
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                    message
+                )}`;
+                window.open(url, "_blank");
+            }
+
+            // Event listener untuk modal dan WhatsApp button
+            if (section) {
+                section.addEventListener("click", function (e) {
+                    // Handle modal image viewer
+                    const trigger = e.target.closest(".btn-view-image");
+                    if (trigger) {
+                        const item = trigger.closest(".carousel-item-katalog");
+                        const img = item ? item.querySelector("img") : null;
+                        const src = img ? img.getAttribute("src") || img.src : "";
+                        if (src) {
+                            modalImg.src = src;
+                            modal.show();
+                        }
+                        return;
+                    }
+
+                    // Handle WhatsApp button
+                    const waBtn = e.target.closest(".btn-whatsapp");
+                    if (waBtn) {
+                        const productTitle = waBtn.getAttribute("data-title") || "Produk";
+                        openWhatsApp(productTitle);
+                    }
+                });
+            }
+        })();
+
+        // // Data untuk olahan kambing
+        // const olahanData = [
+        //     {
+        //         background: "asset/image/kambing_olahan.webp",
+        //         thumbnail: "asset/image/kambing_olahan.webp",
+        //         title: "Daftar Kambing <br> & Produk Lainnya",
+        //         link: "#"
+        //     },
+        //     {
+        //         background: "asset/image/kambing_olahan_bg.webp",
+        //         thumbnail: "asset/image/kambing_olahan_bg.webp",
+        //         title: "Susu Kambing <br> Segar & Berkualitas",
+        //         link: "#"
+        //     },
+        //     // {
+        //     //     background: "asset/image/daging_kambing_bg.webp",
+        //     //     thumbnail: "asset/image/daging_kambing.webp",
+        //     //     title: "Daging Kambing <br> Premium",
+        //     //     link: "#"
+        //     // }
+        // ];
+
+        // let currentIndex = 0;
+        // let autoSlideInterval;
+        // const hasMultipleItems = olahanData.length > 1;
+
+        // // Fungsi untuk update tampilan
+        // function updateOlahanDisplay(index, animate = true) {
+        //     const olahanBg = document.getElementById('olahan-bg');
+        //     const olahanThumb = document.getElementById('olahan-thumb');
+        //     const olahanTitle = document.getElementById('olahan-title');
+        //     const olahanCard = document.getElementById('olahan-card');
+
+        //     if (!olahanBg || !olahanThumb || !olahanTitle) return;
+
+        //     // Hanya animate jika lebih dari 1 item
+        //     const shouldAnimate = animate && hasMultipleItems;
+
+        //     // Fade out animation
+        //     if (shouldAnimate) {
+        //         olahanBg.classList.add('fade-out');
+        //         olahanCard.classList.add('fade-out');
+        //     }
+
+        //     setTimeout(() => {
+        //         // Update content
+        //         olahanBg.style.backgroundImage = `
+        //     linear-gradient(254.63deg, rgba(0,0,0,0) 45.19%, rgba(0,0,0,0.8) 73.82%),
+        //     url("${olahanData[index].background}")
+        // `;
+        //         olahanThumb.src = olahanData[index].thumbnail;
+        //         olahanTitle.innerHTML = olahanData[index].title;
+
+        //         // Update link
+        //         const linkElement = olahanCard.closest('a');
+        //         if (linkElement) {
+        //             linkElement.href = olahanData[index].link;
+        //         }
+
+        //         // Update indicator
+        //         updateIndicators(index);
+
+        //         // Fade in animation
+        //         if (shouldAnimate) {
+        //             olahanBg.classList.remove('fade-out');
+        //             olahanCard.classList.remove('fade-out');
+        //         }
+        //     }, shouldAnimate ? 400 : 0);
+
+        //     currentIndex = index;
+        // }
+
+        // // Fungsi untuk membuat indicators
+        // function createIndicators() {
+        //     // Jangan buat indicators jika cuma 1 item
+        //     if (!hasMultipleItems) return;
+
+        //     const olahanCard = document.getElementById('olahan-card');
+        //     if (!olahanCard) return;
+
+        //     const indicatorContainer = document.createElement('div');
+        //     indicatorContainer.className = 'd-flex gap-2 carousel-indicator position-absolute top-0 start-0 w-100 p-3';
+
+        //     olahanData.forEach((_, index) => {
+        //         const indicator = document.createElement('div');
+        //         indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
+        //         indicator.setAttribute('data-index', index);
+        //         indicator.style.cursor = 'pointer';
+
+        //         // Click event untuk indicator
+        //         indicator.addEventListener('click', (e) => {
+        //             e.preventDefault();
+        //             e.stopPropagation();
+        //             stopAutoSlide();
+        //             updateOlahanDisplay(index);
+        //             startAutoSlide();
+        //         });
+
+        //         indicatorContainer.appendChild(indicator);
+        //     });
+
+        //     // Insert indicators ke dalam card
+        //     const parentDiv = olahanCard.closest('.p-3');
+        //     if (parentDiv) {
+        //         parentDiv.insertBefore(indicatorContainer, parentDiv.firstChild);
+        //     }
+        // }
+
+        // // Fungsi untuk update indicators
+        // function updateIndicators(index) {
+        //     if (!hasMultipleItems) return;
+
+        //     const indicators = document.querySelectorAll('.indicator');
+        //     indicators.forEach((indicator, i) => {
+        //         if (i === index) {
+        //             indicator.classList.add('active');
+        //         } else {
+        //             indicator.classList.remove('active');
+        //         }
+        //     });
+        // }
+
+        // // Fungsi untuk slide otomatis
+        // function startAutoSlide() {
+        //     // Jangan start auto slide jika cuma 1 item
+        //     if (!hasMultipleItems) return;
+
+        //     autoSlideInterval = setInterval(() => {
+        //         const nextIndex = (currentIndex + 1) % olahanData.length;
+        //         updateOlahanDisplay(nextIndex);
+        //     }, 5000); // Ganti setiap 5 detik
+        // }
+
+        // function stopAutoSlide() {
+        //     if (autoSlideInterval) {
+        //         clearInterval(autoSlideInterval);
+        //     }
+        // }
+
+        // // Touch/Swipe support untuk mobile
+        // let touchStartX = 0;
+        // let touchEndX = 0;
+
+        // function handleSwipe() {
+        //     // Jangan handle swipe jika cuma 1 item
+        //     if (!hasMultipleItems) return;
+
+        //     const swipeThreshold = 50;
+        //     const diff = touchStartX - touchEndX;
+
+        //     if (Math.abs(diff) > swipeThreshold) {
+        //         stopAutoSlide();
+        //         if (diff > 0) {
+        //             // Swipe left - next
+        //             const nextIndex = (currentIndex + 1) % olahanData.length;
+        //             updateOlahanDisplay(nextIndex);
+        //         } else {
+        //             // Swipe right - previous
+        //             const prevIndex = (currentIndex - 1 + olahanData.length) % olahanData.length;
+        //             updateOlahanDisplay(prevIndex);
+        //         }
+        //         startAutoSlide();
+        //     }
+        // }
+
+        // // Initialize
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     createIndicators();
+        //     updateOlahanDisplay(0, false);
+        //     startAutoSlide();
+
+        //     // Add touch events hanya jika lebih dari 1 item
+        //     if (hasMultipleItems) {
+        //         const olahanSection = document.querySelector('.olahan-kambing');
+        //         if (olahanSection) {
+        //             olahanSection.addEventListener('touchstart', (e) => {
+        //                 touchStartX = e.changedTouches[0].screenX;
+        //             }, { passive: true });
+
+        //             olahanSection.addEventListener('touchend', (e) => {
+        //                 touchEndX = e.changedTouches[0].screenX;
+        //                 handleSwipe();
+        //             }, { passive: true });
+        //         }
+
+        //         // Pause auto-slide saat hover (desktop) - hanya jika lebih dari 1 item
+        //         const olahanCard = document.getElementById('olahan-card');
+        //         if (olahanCard) {
+        //             olahanCard.closest('.p-3').addEventListener('mouseenter', stopAutoSlide);
+        //             olahanCard.closest('.p-3').addEventListener('mouseleave', startAutoSlide);
+        //         }
+        //     }
+        // });
+
+        // // Cleanup saat page unload
+        // window.addEventListener('beforeunload', stopAutoSlide);
+
+        // FAQ toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('#faq .faq-item').forEach(function (item) {
+                item.addEventListener('click', function (e) {
+                    var icon = item.querySelector('.bi-chevron-down');
+                    var content = item.querySelector('.faq-content');
+
+                    function openItem(el) {
+                        el.classList.add('open');
+                        var c = el.querySelector('.faq-content');
+                        var i = el.querySelector('.bi-chevron-down');
+                        if (c) {
+                            c.style.maxHeight = c.scrollHeight + 'px';
+                            c.style.opacity = '1';
+                        }
+                        if (i) { i.classList.add('rotated'); }
+                    }
+
+                    function closeItem(el) {
+                        el.classList.remove('open');
+                        var c = el.querySelector('.faq-content');
+                        var i = el.querySelector('.bi-chevron-down');
+                        if (c) {
+                            c.style.maxHeight = '0px';
+                            c.style.opacity = '0';
+                        }
+                        if (i) { i.classList.remove('rotated'); }
+                    }
+
+                    var wasOpen = item.classList.contains('open');
+
+                    document.querySelectorAll('#faq .faq-item.open').forEach(function (other) {
+                        if (other !== item) { closeItem(other); }
+                    });
+
+                    if (wasOpen) {
+                        closeItem(item);
+                    } else {
+                        openItem(item);
+                    }
+                });
+            });
+        });
+
+        // TESTIMONI
+        document.addEventListener('DOMContentLoaded', function () {
+            const testimonis = [
+                {
+                    name: 'Rindi Rica',
+                    message: 'Pelayanan Damba Domba luar biasa! Proses aqiqah sangat mudah, kambing sehat, dan masakannya enak banget. Keluarga juga puas dengan hasilnya.'
+                },
+                {
+                    name: 'Andika Pratama',
+                    message: 'Saya sangat terbantu dengan layanan aqiqah di Damba Domba. Semua prosesnya rapi, dari pemesanan sampai pengantaran. Recommended banget!'
+                },
+                {
+                    name: 'Siti Aisyah',
+                    message: 'Kambingnya besar, dagingnya empuk, dan bumbunya meresap. Alhamdulillah acara aqiqah anak kami berjalan lancar berkat Damba Domba.'
+                },
+                {
+                    name: 'Fajar Rahman',
+                    message: 'Awalnya ragu pesan online, tapi Damba Domba terbukti profesional. Semua sesuai syariat, ada bukti penyembelihan, dan hasil masakannya lezat.'
+                }
+            ];
+
+            let idx = 0;
+            let autoSlideInterval;
+            let isAnimating = false;
+            let direction = 'next';
+            const AUTO_SLIDE_DELAY = 5000;
+
+            const msgEl = document.getElementById('testiMessage');
+            const nameEl = document.getElementById('testiName');
+            const indWrap = document.getElementById('testiIndicators');
+            const prevBtn = document.getElementById('testiPrev');
+            const nextBtn = document.getElementById('testiNext');
+
+            function renderIndicators() {
+                indWrap.innerHTML = '';
+                testimonis.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'dot' + (i === idx ? ' active' : '');
+                    dot.setAttribute('role', 'button');
+                    dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+                    dot.addEventListener('click', () => {
+                        if (isAnimating) return;
+                        direction = i > idx ? 'next' : 'prev';
+                        idx = i;
+                        render();
+                        resetAutoSlide();
+                    });
+                    indWrap.appendChild(dot);
+                });
+            }
+
+            function render() {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                const t = testimonis[idx];
+
+                const outClass = direction === 'next' ? 'slide-out-left' : 'slide-out-right';
+                const inClass = direction === 'next' ? 'slide-in-right' : 'slide-in-left';
+
+                if (msgEl && nameEl) {
+                    msgEl.classList.add(outClass);
+                    nameEl.classList.add(outClass);
+
+                    setTimeout(() => {
+                        msgEl.className = '';
+                        nameEl.className = 'testi-name';
+
+                        msgEl.textContent = '"' + t.message + '"';
+                        nameEl.textContent = t.name;
+
+                        msgEl.classList.add(inClass);
+                        nameEl.classList.add(inClass);
+
+                        setTimeout(() => {
+                            msgEl.className = '';
+                            nameEl.className = 'testi-name';
+                            isAnimating = false;
+                        }, 500);
+                    }, 500);
+                }
+
+                renderIndicators();
+            }
+
+            function next() {
+                direction = 'next';
+                idx = (idx + 1) % testimonis.length;
+                render();
+            }
+
+            function prev() {
+                direction = 'prev';
+                idx = (idx - 1 + testimonis.length) % testimonis.length;
+                render();
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(next, AUTO_SLIDE_DELAY);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            function resetAutoSlide() {
+                stopAutoSlide();
+                startAutoSlide();
+            }
+
+            prevBtn.addEventListener('click', () => {
+                prev();
+                resetAutoSlide();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                next();
+                resetAutoSlide();
+            });
+
+            const feedEl = document.querySelector('.testimoni-feed');
+            if (feedEl) {
+                feedEl.addEventListener('mouseenter', stopAutoSlide);
+                feedEl.addEventListener('mouseleave', startAutoSlide);
+            }
+
+            render();
+            startAutoSlide();
+
+            console.log('Auto slide initialized with', testimonis.length, 'testimonials');
+        });
+
+        // CERITA KAMI
+        function videoCarousel() {
+            return {
+                canScrollLeft: false,
+                canScrollRight: false,
+                isScrolling: false,
+                videos: [
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami1.png',
+                        title: 'Video 1',
+                        platform: 'instagram',
+                        platformColor: '#E4405F',
+                        source: '@username',
+                        judul: 'Judul Video 1'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami2.png',
+                        title: 'Video 2',
+                        platform: 'tiktok',
+                        platformColor: '#000000',
+                        source: '@username',
+                        judul: 'Judul Video 2'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami3.png',
+                        title: 'Video 3',
+                        platform: 'youtube',
+                        platformColor: '#FF0000',
+                        source: 'Channel Name',
+                        judul: 'Judul Video 3'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami4.png',
+                        title: 'Video 4',
+                        platform: 'instagram',
+                        platformColor: '#E4405F',
+                        source: '@username',
+                        judul: 'Judul Video 4'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami5.png',
+                        title: 'Video 5',
+                        platform: 'youtube',
+                        platformColor: '#FF0000',
+                        source: 'Channel Name',
+                        judul: 'Judul Video 5'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami6.png',
+                        title: 'Video 6',
+                        platform: 'youtube',
+                        platformColor: '#FF0000',
+                        source: 'Channel Name',
+                        judul: 'Judul Video 6'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami7.png',
+                        title: 'Video 7',
+                        platform: 'youtube',
+                        platformColor: '#FF0000',
+                        source: 'Channel Name',
+                        judul: 'Judul Video 7'
+                    },
+                    {
+                        url: '#',
+                        thumbnail: 'asset/image/cerita-kami8.png',
+                        title: 'Video 8',
+                        platform: 'youtube',
+                        platformColor: '#FF0000',
+                        source: 'Channel Name',
+                        judul: 'Judul Video 8'
+                    },
+                ],
+                isDesktop: false,
+                init() {
+                    this.checkIfDesktop();
+                    window.addEventListener('resize', () => this.checkIfDesktop());
+
+                    this.$nextTick(() => {
+                        this.updateScrollButtons();
+                    });
+
+                    let scrollTimeout;
+                    this.$refs.container.addEventListener('scroll', () => {
+                        this.isScrolling = true;
+                        clearTimeout(scrollTimeout);
+
+                        scrollTimeout = setTimeout(() => {
+                            this.isScrolling = false;
+                        }, 150);
+
+                        this.updateScrollButtons();
+                    });
+
+                    // Snap scrolling untuk efek lebih modern dengan smooth
+                    const container = this.$refs.container;
+                    container.style.scrollSnapType = 'x mandatory';
+                    container.style.scrollPaddingLeft = '20px';
+                    container.style.scrollBehavior = 'smooth';
+
+                    // Tambahan untuk Safari dan browser lain
+                    container.style.webkitOverflowScrolling = 'touch';
+                },
+                checkIfDesktop() {
+                    this.isDesktop = window.innerWidth >= 1024;
+                },
+                updateScrollButtons() {
+                    const container = this.$refs.container;
+                    this.canScrollLeft = container.scrollLeft > 10;
+                    this.canScrollRight = container.scrollLeft < (container.scrollWidth - container.clientWidth - 10);
+                },
+                scrollPrev() {
+                    const container = this.$refs.container;
+                    const cardWidth = container.querySelector('[x-ref="card"]')?.offsetWidth || 300;
+                    const gap = 20;
+                    const scrollAmount = (cardWidth + gap) * 1.5;
+
+                    this.smoothScroll(container, -scrollAmount);
+                },
+                scrollNext() {
+                    const container = this.$refs.container;
+                    const cardWidth = container.querySelector('[x-ref="card"]')?.offsetWidth || 300;
+                    const gap = 20;
+                    const scrollAmount = (cardWidth + gap) * 1.5;
+                    this.smoothScroll(container, scrollAmount);
+                },
+
+                // Custom smooth scroll dengan easing function
+                smoothScroll(element, distance) {
+                    const start = element.scrollLeft;
+                    const target = start + distance;
+                    const duration = 600;
+                    const startTime = performance.now();
+
+                    // Easing function untuk animasi yang lebih natural (ease-out cubic)
+                    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+                    const animateScroll = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easeProgress = easeOutCubic(progress);
+
+                        element.scrollLeft = start + (distance * easeProgress);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                        }
+                    };
+
+                    requestAnimationFrame(animateScroll);
+                },
+
+                // Method untuk scroll ke item tertentu
+                scrollToIndex(index) {
+                    const container = this.$refs.container;
+                    const cards = container.querySelectorAll('[x-ref="card"]');
+                    if (cards[index]) {
+                        cards[index].scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'start'
+                        });
+                    }
+                }
+            };
+        }
+    </script>
+</body>
+
+</html>
